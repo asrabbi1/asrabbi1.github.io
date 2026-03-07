@@ -1,0 +1,397 @@
+/* Contact */
+
+    @media (max-width:768px){
+    .space-100{
+        margin-bottom:40px;
+    }
+}
+/* ===== CONTACT SECTION ===== */
+body {
+    background: #000 !important; /* dark page background */
+    color: #fff !important;
+}
+
+/* Section Heading */
+.heading h2 {
+    color: #ffffff !important;
+}
+
+/* Wrapper flex for desktop */
+.contact-wrapper {
+    display: flex !important;
+    align-items: stretch !important; /* equal height */
+    gap: 40px !important;
+    flex-wrap: wrap !important;
+}
+
+/* ===== LEFT & RIGHT BOXES ===== */
+.contact-info,
+.contact-form-area {
+    flex: 1 1 48% !important;
+    min-width: 300px !important;
+    background: #ffffff !important; /* white background */
+    padding: 40px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* LEFT SIDE TEXT */
+.contact-info h4 {
+    margin-bottom: 20px !important;
+    font-size: 16px !important;
+    color: #333 !important; /* dark text */
+}
+
+.info-box {
+    margin-bottom: 15px !important;
+}
+
+.info-box h5 {
+    color: #1dba1d !important;
+    margin-bottom: 5px !important;
+    font-weight: 600 !important;
+}
+
+.contact-info p {
+    color: #222 !important;
+    margin: 0 !important;
+}
+
+/* FORM */
+.contact-form-area form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+}
+
+.contact-form-area input,
+.contact-form-area textarea {
+    padding: 12px 15px !important;
+    border-radius: 6px !important;
+    border: 1px solid #ccc !important;
+    font-size: 14px !important;
+    background: #f9f9f9 !important; /* light input inside white box */
+    color: #000 !important;
+    width: 100% !important;
+}
+
+.contact-form-area input:focus,
+.contact-form-area textarea:focus {
+    outline: none !important;
+    border-color: #1dba1d !important;
+}
+
+.contact-form-area button {
+    padding: 12px !important;
+    border: none !important;
+    background: #1dba1d !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+}
+
+.contact-form-area button:hover {
+    background: #159915 !important;
+}
+
+/* ===== SUCCESS MODAL ===== */
+.success-modal.hidden {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.success-modal {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.9) !important; /* dark modal overlay */
+    z-index: 999999 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease !important;
+}
+
+.success-modal.active {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.success-modal-content {
+    background: #1a1a1a !important; /* dark box */
+    padding: 40px 30px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    max-width: 400px !important;
+    width: 90% !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5) !important;
+    animation: modalPop 0.3s ease !important;
+    color: #fff !important;
+}
+
+.success-icon {
+    width: 60px !important;
+    height: 60px !important;
+    background: #1dba1d !important;
+    color: #fff !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 15px !important;
+}
+
+.success-modal-content h3 {
+    margin-bottom: 10px !important;
+    color: #1dba1d !important;
+}
+
+.success-modal-content button {
+    margin-top: 20px !important;
+    padding: 10px 25px !important;
+    border: none !important;
+    background: #1dba1d !important;
+    color: white !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+}
+
+.success-modal-content button:hover {
+    background: #159915 !important;
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+
+    .contact-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+    }
+
+    .contact-info,
+    .contact-form-area {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        max-width: 600px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+}
+
+/* MOBILE SMALL */
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding: 20px 15px !important;
+    }
+
+    .contact-info h4 {
+        font-size: 14px !important;
+        line-height: 1.5;
+    }
+
+    .contact-form-area input,
+    .contact-form-area textarea {
+        font-size: 13px !important;
+        padding: 10px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-form-area button {
+        padding: 10px !important;
+        width: 100%;
+    }
+}
+
+
+
+
+/* About */
+
+    @media (max-width:768px){
+    .owl-nav{
+        display:none !important;
+    }
+}
+.no-click {
+    pointer-events: none;   /* disables clicking */
+    cursor: default;        /* optional: shows default cursor */
+    color: gray;            /* optional: indicate disabled */
+    text-decoration: none;  /* optional: remove underline */
+}
+
+/* About Image */
+.about-img-section {
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center;
+    height: 100%; /* parent height অনুযায়ী */
+}
+
+.about-img-section img {
+    border-radius: 12px;
+    height: 100%;  /* info-box height অনুযায়ী */
+    width: auto;   /* aspect ratio ঠিক রাখে */
+}
+
+/* Info Box Wrapper */
+.info-box-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 100%; /* match parent */
+}
+
+/* Individual Info Box */
+.info-box {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center content */
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-box li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.info-box span {
+    font-weight: 600;
+    color: #ffffff;
+    min-width: 90px;
+}
+.info-box-wrapper .info-box p{
+    color:#ffffff !important;
+}
+
+.info-box p,
+.info-box a {
+    margin: 0;
+    color: #cccccc;
+    text-align: right;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.info-box .available {
+    color: #00ff99 !important;
+    font-weight: 600;
+}
+
+/* Responsive: Tablet & Mobile */
+@media (max-width: 768px) {
+    .about-area .row.align-items-center {
+        flex-direction: column;
+    }
+
+    .info-box-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-img-section {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .about-img-section img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .info-box li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-box span {
+        margin-bottom: 4px;
+    }
+
+    .info-box p,
+    .info-box a {
+        text-align: left;
+    }
+}
+
+
+/* Skill Percetage*/
+
+.skills-section {
+    padding:50px 0;
+    background: #111; /* dark background */
+}
+
+.skill-item {
+    margin-bottom: 30px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.skill-percent {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #2a2a2a;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #107e86, #0fdb34);
+    border-radius: 50px;
+    transition: width 1.5s ease-in-out;
+}
